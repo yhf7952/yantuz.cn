@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>岩兔站</title>
+  <icon>https://yantuz.cn/icon.png</icon>
+  <subtitle>分享一些笔记、知识和小工具</subtitle>
+  <link href="https://yantuz.cn/atom.xml" rel="self"/>
+  
+  <link href="https://yantuz.cn/"/>
+  <updated>2021-07-02T09:22:54.305Z</updated>
+  <id>https://yantuz.cn/</id>
+  
+  <author>
+    <name>yantuz.cn</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>五笔七天速成教程</title>
+    <link href="https://yantuz.cn/wubi/"/>
+    <id>https://yantuz.cn/wubi/</id>
+    <published>2021-05-24T00:25:28.000Z</published>
+    <updated>2021-07-02T09:22:54.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对于一款暴露年龄的软件，不知谁还有没有人会关注。楼主本身也是10多年前学的了，而且受益至今，所以还是想分享出来，让更多的人学会。&lt;/p&gt;
+&lt;p&gt;原来学五笔的时候其实根本没电脑，只有上微机课才能摸到，所以多数是拿着字根表死记硬背。现在电脑都普及了，本教程抛弃了原来需要的背字根</summary>
+        
+      
+    
+    
+    
+    <category term="知识" scheme="https://yantuz.cn/categories/%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="五笔" scheme="https://yantuz.cn/tags/%E4%BA%94%E7%AC%94/"/>
+    
+    <category term="教程" scheme="https://yantuz.cn/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>岩兔站的始末</title>
+    <link href="https://yantuz.cn/yantuz/"/>
+    <id>https://yantuz.cn/yantuz/</id>
+    <published>2019-08-25T22:36:21.000Z</published>
+    <updated>2021-06-02T08:16:35.695Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;岩兔站建于2017年底，卒于2019年，算是我做一件事的从入门到放弃的全过程……&lt;/p&gt;
+&lt;p&gt;建站的过程挺快乐，交到了朋友也很开心，每天想内容做更新很痛苦，而因写了反动文请喝茶却非常苦涩。&lt;/p&gt;
+&lt;p&gt;网站关了也挺好，不用为更新维护它发愁了。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="https://yantuz.cn/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="建站" scheme="https://yantuz.cn/tags/%E5%BB%BA%E7%AB%99/"/>
+    
+    <category term="吐槽" scheme="https://yantuz.cn/tags/%E5%90%90%E6%A7%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>妹子图库</title>
+    <link href="https://yantuz.cn/mmpic/"/>
+    <id>https://yantuz.cn/mmpic/</id>
+    <published>2018-04-03T01:25:55.000Z</published>
+    <updated>2021-07-02T08:58:17.203Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; class=&quot;headerlink&quot; title=&quot;实现原理&quot;&gt;&lt;/a&gt;实现原理&lt;/h2&gt;&lt;p&gt;闲来无事写的一个妹子图库，妹子图全部来源于&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="https://yantuz.cn/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="PHP" scheme="https://yantuz.cn/tags/PHP/"/>
+    
+    <category term="妹子图" scheme="https://yantuz.cn/tags/%E5%A6%B9%E5%AD%90%E5%9B%BE/"/>
+    
+  </entry>
+  
+</feed>
