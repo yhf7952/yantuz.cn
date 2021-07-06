@@ -11,9 +11,9 @@
   
   <title>
     
-      Category 
+      微博图床(伪)-自动上传、压缩、水印 
       
-       : 项目
+      
       |
     
      岩兔站
@@ -94,66 +94,179 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container category-details">
-  <div class="content-title">
-    <h2>
-      <span>项目</span>
-    </h2>
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">微博图床(伪)-自动上传、压缩、水印</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2019-05-01
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/PHP/" title="PHP">
+                    <b>#</b> PHP
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%BE%AE%E5%8D%9A/" title="微博">
+                    <b>#</b> 微博
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%9B%BE%E5%BA%8A/" title="图床">
+                    <b>#</b> 图床
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>这个项目本来是把图片上传至微博图床的，当年微博不限制图片外链，可以说是全国最快的免费不限量图床了。然后就做了这个小页面，实现了图片调整尺寸、加水印、上传微博一步搞定。</p>
+<p>然而理想很美好，现实很残酷，随着微博关了外链，这个功能就没用了……然后功能去去，变成了一个本地图床。好歹还剩下自动调尺寸和加水印的功能。</p>
+<h2 id="演示地址"><a href="#演示地址" class="headerlink" title="演示地址"></a>演示地址</h2><p><a target="_blank" rel="noopener" href="https://bak.yantuz.cn:8000/weiboUploader-Watermark/">https://bak.yantuz.cn:8000/weiboUploader-Watermark/</a></p>
+<p>注意了，演示地址传图有效期只有1天，仅供测试。</p>
+<p><img src="https://bak.yantuz.cn:8000/img/upload/2019/05/5cc8fa579afca.jpg" alt="图床"></p>
+<h2 id="上链接"><a href="#上链接" class="headerlink" title="上链接"></a>上链接</h2><ul>
+<li>原版微博图床：<a target="_blank" rel="noopener" href="https://bak.yantuz.cn:8000/376.html">https://bak.yantuz.cn:8000/376.html</a></li>
+<li>本地图床：<a target="_blank" rel="noopener" href="https://bak.yantuz.cn:8000/818.html">https://bak.yantuz.cn:8000/818.html</a></li>
+<li>项目开源：<a target="_blank" rel="noopener" href="https://github.com/yhf7952">yhf7952</a>/<a target="_blank" rel="noopener" href="https://github.com/yhf7952/weiboUploader-Watermark">weiboUploader-Watermark</a></li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/qrCode/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2019-05-01 00:00:32
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/PHP/" title="PHP">
+                        <b>#</b> PHP
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%BE%AE%E5%8D%9A/" title="微博">
+                        <b>#</b> 微博
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%9B%BE%E5%BA%8A/" title="图床">
+                        <b>#</b> 图床
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/yantuz/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
   </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="岩兔站的始末">
-        <span class="time-m-d">2019-08-25</span>
-        <a href="/yantuz/">
-          <span>岩兔站的始末</span>
-        </a>
-      </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%94%E7%A4%BA%E5%9C%B0%E5%9D%80"><span class="toc-text">演示地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E9%93%BE%E6%8E%A5"><span class="toc-text">上链接</span></a></li></ol>
     </div>
+  </div>
+
   
-    <div class="post-list">
-      <div class="post-item" title="微博图床(伪)-自动上传、压缩、水印">
-        <span class="time-m-d">2019-05-01</span>
-        <a href="/pictureUpload/">
-          <span>微博图床(伪)-自动上传、压缩、水印</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="单文件二维码API(PHP版)">
-        <span class="time-m-d">2018-06-24</span>
-        <a href="/qrCode/">
-          <span>单文件二维码API(PHP版)</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="基于微信小程序的rss阅读器">
-        <span class="time-m-d">2018-05-22</span>
-        <a href="/wxrss/">
-          <span>基于微信小程序的rss阅读器</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="妹子图库">
-        <span class="time-m-d">2018-04-03</span>
-        <a href="/mmpic/">
-          <span>妹子图库</span>
-        </a>
-      </div>
-    </div>
-  
-  <nav class="post-navigation">
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-    <span class="page-num">1 / 1</span>
+      <div class="comments-container">
+        
+  <div id="disqus_thread"></div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://yantuz-cn.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
     
-  </nav>
-</div>
+  </div>
+
 
         <div class="footer">
   <div class="social">

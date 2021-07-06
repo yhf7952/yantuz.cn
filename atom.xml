@@ -6,7 +6,7 @@
   <link href="https://yantuz.cn/atom.xml" rel="self"/>
   
   <link href="https://yantuz.cn/"/>
-  <updated>2021-07-02T09:22:54.305Z</updated>
+  <updated>2021-07-06T08:46:14.765Z</updated>
   <id>https://yantuz.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://yantuz.cn/wubi/"/>
     <id>https://yantuz.cn/wubi/</id>
     <published>2021-05-24T00:25:28.000Z</published>
-    <updated>2021-07-02T09:22:54.305Z</updated>
+    <updated>2021-07-06T08:46:14.765Z</updated>
     
     
       
@@ -30,7 +30,7 @@
         
     <summary type="html">&lt;p&gt;对于一款暴露年龄的软件，不知谁还有没有人会关注。楼主本身也是10多年前学的了，而且受益至今，所以还是想分享出来，让更多的人学会。&lt;/p&gt;
 &lt;p&gt;原来学五笔的时候其实根本没电脑，只有上微机课才能摸到，所以多数是拿着字根表死记硬背。现在电脑都普及了，本教程抛弃了原来需要的背字根流程，学完原理后直接上手练习，以练代背，做到一次成型……&lt;/p&gt;
-&lt;p&gt;课时划分是计划：&lt;/p&gt;
+&lt;h2 id=&quot;课时计划&quot;&gt;&lt;a href=&quot;#课时计划&quot; class=&quot;headerlink&quot; title=&quot;课时计划&quot;&gt;&lt;/a&gt;课时计划&lt;/h2&gt;&lt;p&gt;课时计划是：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1-3天：记字根&lt;/li&gt;
 &lt;li&gt;4天：学拆字&lt;/li&gt;
@@ -38,10 +38,14 @@
 &lt;li&gt;6-7天：巩固练习&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;嗯，看起来很美好，至于各位大佬能不能学成，就看各位了……&lt;/p&gt;
-&lt;p&gt;那么哪里可以得到这个教程呢：&lt;/p&gt;
+&lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;那么哪里可以得到这个教程呢：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;教程：&lt;a href=&quot;https://wubi.yantuz.cn/&quot;&gt;https://wubi.yantuz.cn/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;练习：&lt;a</summary>
+&lt;li&gt;练习：&lt;a href=&quot;https://wubigame.yantuz.cn/&quot;&gt;https://wubigame.yantuz.cn/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对了，五笔练习开源，是楼主用vue做的第1个项目，感兴趣的小伙伴可以看看。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub:&lt;a href=&quot;https://github.com/yhf7952&quot;&gt;yhf7952&lt;/a&gt;/&lt;a</summary>
         
       
     
@@ -88,6 +92,89 @@
     <category term="建站" scheme="https://yantuz.cn/tags/%E5%BB%BA%E7%AB%99/"/>
     
     <category term="吐槽" scheme="https://yantuz.cn/tags/%E5%90%90%E6%A7%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微博图床(伪)-自动上传、压缩、水印</title>
+    <link href="https://yantuz.cn/pictureUpload/"/>
+    <id>https://yantuz.cn/pictureUpload/</id>
+    <published>2019-05-01T00:00:32.000Z</published>
+    <updated>2021-07-06T08:39:25.363Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这个项目本来是把图片上传至微博图床的，当年微博不限制图片外链，可以说是全国最快的免费不限量图床了。然后就做了这个小页面，实现了图片调整尺寸、加水印、上传微博一步搞定。&lt;/p&gt;
+&lt;p&gt;然而理想很美好，现实很残酷，随着微博关了外链，这个功能就没用了……然后功能去去，变成了一个本地图床。好歹还剩下自动调尺寸和加水印的功能。&lt;/p&gt;
+&lt;h2 id=&quot;演示地址&quot;&gt;&lt;a href=&quot;#演示地址&quot; class=&quot;headerlink&quot; title=&quot;演示地址&quot;&gt;&lt;/a&gt;演示地址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://bak.yantuz.cn:8000/weiboUploader-Watermark/&quot;&gt;https://bak.yantuz.cn:8000/weiboUploader-Watermark/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意了，演示地址传图有效期只有1天，仅供测试。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bak.yantuz.cn:8000/img/upload/2019/05/5cc8fa579afca.jpg&quot; alt=&quot;图床&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;上链接&quot;&gt;&lt;a href=&quot;#上链接&quot; class=&quot;headerlink&quot; title=&quot;上链接&quot;&gt;&lt;/a&gt;上链接&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;原版微博图床：&lt;a href=&quot;https://bak.yantuz.cn:8000/376.html&quot;&gt;https://bak.yantuz.cn:8000/376.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;本地图床：&lt;a href=&quot;https://bak.yantuz.cn:8000/818.html&quot;&gt;https://bak.yantuz.cn:8000/818.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;项目开源：&lt;a href=&quot;https://github.com/yhf7952&quot;&gt;yhf7952&lt;/a&gt;/&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="https://yantuz.cn/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="PHP" scheme="https://yantuz.cn/tags/PHP/"/>
+    
+    <category term="微博" scheme="https://yantuz.cn/tags/%E5%BE%AE%E5%8D%9A/"/>
+    
+    <category term="图床" scheme="https://yantuz.cn/tags/%E5%9B%BE%E5%BA%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单文件二维码API(PHP版)</title>
+    <link href="https://yantuz.cn/qrCode/"/>
+    <id>https://yantuz.cn/qrCode/</id>
+    <published>2018-06-24T00:27:36.000Z</published>
+    <updated>2021-07-06T08:42:20.543Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;网页上插入二维码时，生成图片再上传就非常的不环保，如果能通过API直接生成任意内容的二维码就舒服了。本着这个想法，在&lt;a href=&quot;http://phpqrcode.sourceforge.net/&quot;&gt;qrcode&lt;/a&gt;基础上，实现了单文件版的二维码API。&lt;/p&gt;
+&lt;h2 id=&quot;效果展示&quot;&gt;&lt;a href=&quot;#效果展示&quot; class=&quot;headerlink&quot; title=&quot;效果展示&quot;&gt;&lt;/a&gt;效果展示&lt;/h2&gt;&lt;p&gt;比如我要展示一下本站的二维码，内容为&lt;code&gt;https://yantuz.cn&lt;/code&gt;,输入以下代码：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;img src=&amp;quot;https://bak.yantuz.cn:8000/qr/?text=https://yantuz.cn/&amp;quot;&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;显示效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bak.yantuz.cn:8000/qr/?text=https://yantuz.cn/&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;p&gt;在把php文件放任何支持它运行的服务器上，得到访问地址如：&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https://bak.yantuz.cn:8000/qr/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;添加参数即可使用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;text&lt;/strong&gt;：要生成二维码的文本内容（必须）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;size&lt;/strong&gt;：生成二维码大小，单位像素&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;上链接&quot;&gt;&lt;a href=&quot;#上链接&quot; class=&quot;headerlink&quot; title=&quot;上链接&quot;&gt;&lt;/a&gt;上链接&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;详细说明：&lt;a href=&quot;https://bak.yantuz.cn:8000/567.html&quot;&gt;开源免费的PHP二维码API&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;API地址：&lt;a href=&quot;https://bak.yantuz.cn:8000/qr/&quot;&gt;qrCode&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub:&lt;a href=&quot;https://github.com/yhf7952&quot;&gt;yhf7952&lt;/a&gt;/&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="https://yantuz.cn/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="PHP" scheme="https://yantuz.cn/tags/PHP/"/>
+    
+    <category term="二维码" scheme="https://yantuz.cn/tags/%E4%BA%8C%E7%BB%B4%E7%A0%81/"/>
     
   </entry>
   
