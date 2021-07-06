@@ -29,7 +29,19 @@
         
         
     <summary type="html">&lt;p&gt;对于一款暴露年龄的软件，不知谁还有没有人会关注。楼主本身也是10多年前学的了，而且受益至今，所以还是想分享出来，让更多的人学会。&lt;/p&gt;
-&lt;p&gt;原来学五笔的时候其实根本没电脑，只有上微机课才能摸到，所以多数是拿着字根表死记硬背。现在电脑都普及了，本教程抛弃了原来需要的背字根</summary>
+&lt;p&gt;原来学五笔的时候其实根本没电脑，只有上微机课才能摸到，所以多数是拿着字根表死记硬背。现在电脑都普及了，本教程抛弃了原来需要的背字根流程，学完原理后直接上手练习，以练代背，做到一次成型……&lt;/p&gt;
+&lt;p&gt;课时划分是计划：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1-3天：记字根&lt;/li&gt;
+&lt;li&gt;4天：学拆字&lt;/li&gt;
+&lt;li&gt;5天：一二级简码&lt;/li&gt;
+&lt;li&gt;6-7天：巩固练习&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;嗯，看起来很美好，至于各位大佬能不能学成，就看各位了……&lt;/p&gt;
+&lt;p&gt;那么哪里可以得到这个教程呢：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;教程：&lt;a href=&quot;https://wubi.yantuz.cn/&quot;&gt;https://wubi.yantuz.cn/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;练习：&lt;a</summary>
         
       
     
@@ -59,7 +71,12 @@
     <summary type="html">&lt;p&gt;岩兔站建于2017年底，卒于2019年，算是我做一件事的从入门到放弃的全过程……&lt;/p&gt;
 &lt;p&gt;建站的过程挺快乐，交到了朋友也很开心，每天想内容做更新很痛苦，而因写了反动文请喝茶却非常苦涩。&lt;/p&gt;
 &lt;p&gt;网站关了也挺好，不用为更新维护它发愁了。&lt;/p&gt;
-&lt;h2</summary>
+&lt;h2 id=&quot;岩兔站现状&quot;&gt;&lt;a href=&quot;#岩兔站现状&quot; class=&quot;headerlink&quot; title=&quot;岩兔站现状&quot;&gt;&lt;/a&gt;岩兔站现状&lt;/h2&gt;&lt;p&gt;网站虽然关了，但是内容很多，也舍不删……就把郭家认为不合理的文章设置成了私密，并且留了一份存档运行在家里的docker中。&lt;/p&gt;
+&lt;p&gt;有兴趣的朋友还是欢迎去看看。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bak.yantuz.cn:8000/&quot;&gt;岩兔站-网站首页&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bak.yantuz.cn:8000/about&quot;&gt;岩兔站-关于本站&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;后续打算&quot;&gt;&lt;a href=&quot;#后续打算&quot; class=&quot;headerlink&quot; title=&quot;后续打算&quot;&gt;&lt;/a&gt;后续打算&lt;/h2&gt;&lt;p&gt;后续应该是不更新了，主要原因也在最后一篇文章&lt;a href=&quot;https://bak.yantuz.cn:8000/843.html&quot;&gt;是时候说再见&lt;/a&gt;里有说过，就当是个回忆或者是资料备查的地方。&lt;/p&gt;
+&lt;h2 id=&quot;新的岩兔站&quot;&gt;&lt;a href=&quot;#新的岩兔站&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -75,6 +92,50 @@
   </entry>
   
   <entry>
+    <title>基于微信小程序的rss阅读器</title>
+    <link href="https://yantuz.cn/wxrss/"/>
+    <id>https://yantuz.cn/wxrss/</id>
+    <published>2018-05-22T22:55:18.000Z</published>
+    <updated>2021-07-06T07:10:32.952Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这是我做的第一个微信小程序，因为一直有使用rss的习惯，但是并没有一个非常好用的手机端，这次借学习微信小程序的机会，着手做一个基于小程序的rss阅读器。&lt;/p&gt;
+&lt;h2 id=&quot;设计思路&quot;&gt;&lt;a href=&quot;#设计思路&quot; class=&quot;headerlink&quot; title=&quot;设计思路&quot;&gt;&lt;/a&gt;设计思路&lt;/h2&gt;&lt;p&gt;由于小程序的限制，只允许设置若干个已beian的域名，并不能覆盖所有订阅源。所以就用一个可控域名，来访问各种可能订阅的地址，然后再将xml格式的订阅转换成比较容易处理的json，最后进行展示即可。&lt;/p&gt;
+&lt;p&gt;再就是小程序不支持点开链接，所以源文链接就以url的形式展示，可以一键复制到浏览器打开。&lt;/p&gt;
+&lt;h2 id=&quot;实现的功能&quot;&gt;&lt;a href=&quot;#实现的功能&quot; class=&quot;headerlink&quot; title=&quot;实现的功能&quot;&gt;&lt;/a&gt;实现的功能&lt;/h2&gt;&lt;p&gt;由于懒，只实现了最基础的功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;阅读订阅的Rss文章&lt;/li&gt;
+&lt;li&gt;手工添加、删除、编辑Rss订阅源&lt;/li&gt;
+&lt;li&gt;批量导入、导出Rss订阅源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;p&gt;微信扫码即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bak.yantuz.cn:8000/weiboUploader-Watermark/upload/2021/07/60e2b1c339614.jpg&quot; alt=&quot;小程序码&quot;&gt;&lt;/p&gt;
+&lt;p&gt;界面截图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bak.yantuz.cn:8000/WP_Db/images/wx2.sinaimg.cn/large/007452UMly1frlk0rajydj30dw0hnn0k.jpg&quot; alt=&quot;界面截图&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;上链接&quot;&gt;&lt;a href=&quot;#上链接&quot; class=&quot;headerlink&quot; title=&quot;上链接&quot;&gt;&lt;/a&gt;上链接&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;详细介绍：&lt;a href=&quot;https://bak.yantuz.cn:8000/528.html&quot;&gt;岩兔Rss阅读器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub:&lt;a href=&quot;https://github.com/yhf7952&quot;&gt;yhf7952&lt;/a&gt;/&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="https://yantuz.cn/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="微信" scheme="https://yantuz.cn/tags/%E5%BE%AE%E4%BF%A1/"/>
+    
+    <category term="小程序" scheme="https://yantuz.cn/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="rss" scheme="https://yantuz.cn/tags/rss/"/>
+    
+  </entry>
+  
+  <entry>
     <title>妹子图库</title>
     <link href="https://yantuz.cn/mmpic/"/>
     <id>https://yantuz.cn/mmpic/</id>
@@ -86,7 +147,28 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; class=&quot;headerlink&quot; title=&quot;实现原理&quot;&gt;&lt;/a&gt;实现原理&lt;/h2&gt;&lt;p&gt;闲来无事写的一个妹子图库，妹子图全部来源于&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;实现原理&quot;&gt;&lt;a href=&quot;#实现原理&quot; class=&quot;headerlink&quot; title=&quot;实现原理&quot;&gt;&lt;/a&gt;实现原理&lt;/h2&gt;&lt;p&gt;闲来无事写的一个妹子图库，妹子图全部来源于&lt;a href=&quot;https://www.mm131.net/&quot;&gt;MM131美女图片&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;图片并没有采集下来，只提取了图片的ID,一共有10几万图片，然后用随机算法随机抽取一张，组成URL去原站调用显示。&lt;/p&gt;
+&lt;p&gt;到这就能用最简单方式来调用一发了，URL是楼主的备份站，详见&lt;a href=&quot;../yantuz/&quot;&gt;岩兔站始末&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;img src=&amp;quot;https://bak.yantuz.cn:8000/mmPic/&amp;quot; /&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;效果如下（!!刷新会变!!）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bak.yantuz.cn:8000/mmPic/&quot; alt=&quot;MM131&quot; title=&quot;MM131&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;看图工具&quot;&gt;&lt;a href=&quot;#看图工具&quot; class=&quot;headerlink&quot; title=&quot;看图工具&quot;&gt;&lt;/a&gt;看图工具&lt;/h2&gt;&lt;p&gt;进阶一点应用呢，就是利用这个图库做了一个看图的静态页，实现以一些功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手工切换&lt;/li&gt;
+&lt;li&gt;类型筛选&lt;/li&gt;
+&lt;li&gt;幻放映&lt;/li&gt;
+&lt;li&gt;查看图集&lt;/li&gt;
+&lt;li&gt;下载原图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;演示地址：&lt;a href=&quot;https://bak.yantuz.cn:8000/mmPic/view.html&quot;&gt;https://bak.yantuz.cn:8000/mmPic/view.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;手机扫码：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://bak.yantuz.cn:8000/qr/?text=https://bak.yantuz.cn:8000/mmPic/view.html&quot; alt=&quot;qrCode&quot; title=&quot;二维码&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;链接&quot;&gt;&lt;a href=&quot;#链接&quot; class=&quot;headerlink&quot; title=&quot;链接&quot;&gt;&lt;/a&gt;链接&lt;/h2&gt;&lt;p&gt;大概就这么多了，参考链接：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;详细说明：&lt;a href=&quot;https://bak.yantuz.cn:8000/339.html&quot;&gt;[原创]11w+随机妹子图库 你的营养快线在路上&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;GitHub:&lt;a href=&quot;https://github.com/yhf7952&quot;&gt;yhf7952&lt;/a&gt;/&lt;a</summary>
         
       
     

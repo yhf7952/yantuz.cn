@@ -11,7 +11,7 @@
   
   <title>
     
-      归档 
+      基于微信小程序的rss阅读器 
       
       
       |
@@ -94,82 +94,186 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">基于微信小程序的rss阅读器</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2018-05-22
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%BE%AE%E4%BF%A1/" title="微信">
+                    <b>#</b> 微信
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="小程序">
+                    <b>#</b> 小程序
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/rss/" title="rss">
+                    <b>#</b> rss
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>这是我做的第一个微信小程序，因为一直有使用rss的习惯，但是并没有一个非常好用的手机端，这次借学习微信小程序的机会，着手做一个基于小程序的rss阅读器。</p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>由于小程序的限制，只允许设置若干个已beian的域名，并不能覆盖所有订阅源。所以就用一个可控域名，来访问各种可能订阅的地址，然后再将xml格式的订阅转换成比较容易处理的json，最后进行展示即可。</p>
+<p>再就是小程序不支持点开链接，所以源文链接就以url的形式展示，可以一键复制到浏览器打开。</p>
+<h2 id="实现的功能"><a href="#实现的功能" class="headerlink" title="实现的功能"></a>实现的功能</h2><p>由于懒，只实现了最基础的功能：</p>
+<ul>
+<li>阅读订阅的Rss文章</li>
+<li>手工添加、删除、编辑Rss订阅源</li>
+<li>批量导入、导出Rss订阅源</li>
+</ul>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>微信扫码即可</p>
+<p><img src="https://bak.yantuz.cn:8000/weiboUploader-Watermark/upload/2021/07/60e2b1c339614.jpg" alt="小程序码"></p>
+<p>界面截图</p>
+<p><img src="https://bak.yantuz.cn:8000/WP_Db/images/wx2.sinaimg.cn/large/007452UMly1frlk0rajydj30dw0hnn0k.jpg" alt="界面截图"></p>
+<h2 id="上链接"><a href="#上链接" class="headerlink" title="上链接"></a>上链接</h2><ul>
+<li>详细介绍：<a target="_blank" rel="noopener" href="https://bak.yantuz.cn:8000/528.html">岩兔Rss阅读器</a></li>
+<li>GitHub:<a target="_blank" rel="noopener" href="https://github.com/yhf7952">yhf7952</a>/<a target="_blank" rel="noopener" href="https://github.com/yhf7952/WxRssReader">WxRssReader</a></li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/mmpic/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2018-05-22 22:55:18
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%BE%AE%E4%BF%A1/" title="微信">
+                        <b>#</b> 微信
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="小程序">
+                        <b>#</b> 小程序
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/rss/" title="rss">
+                        <b>#</b> rss
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/yantuz/" target="_self">
+                <span>下一页</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
         </div>
       
-      <div class="post-item" title="五笔七天速成教程">
-        <div class="time-m-d">05-24</div>
-        <div class="title">
-          <a href="/wubi/">
-            <span>五笔七天速成教程</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2019</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="岩兔站的始末">
-        <div class="time-m-d">08-25</div>
-        <div class="title">
-          <a href="/yantuz/">
-            <span>岩兔站的始末</span>
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-text">设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="toc-text">实现的功能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-text">使用方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8A%E9%93%BE%E6%8E%A5"><span class="toc-text">上链接</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2018</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="基于微信小程序的rss阅读器">
-        <div class="time-m-d">05-22</div>
-        <div class="title">
-          <a href="/wxrss/">
-            <span>基于微信小程序的rss阅读器</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="妹子图库">
-        <div class="time-m-d">04-03</div>
-        <div class="title">
-          <a href="/mmpic/">
-            <span>妹子图库</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+  <div id="disqus_thread"></div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://yantuz-cn.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
       </div>
     
   </div>
-  <nav class="post-navigation">
-    
-    <span class="page-num">1 / 2</span>
-    
-      <a href="/archives/page/2/"><i class="iconfont icon-angleright"></i></a>
-    
-  </nav>
 
-
-</div>
 
         <div class="footer">
   <div class="social">
