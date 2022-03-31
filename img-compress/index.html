@@ -11,9 +11,9 @@
   
   <title>
     
-      Category 
+      基于php-cli的图片压缩工具 
       
-       : 项目
+      
       |
     
      岩兔站
@@ -94,75 +94,182 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container category-details">
-  <div class="content-title">
-    <h2>
-      <span>项目</span>
-    </h2>
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">基于php-cli的图片压缩工具</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime" title="更新时间"></i>
+          2022-03-30
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags" title="标签"></i>
+                
+                <span class="span--tag">
+                  <a href="/tags/php/" title="php">
+                    <b>#</b> php
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" title="图片处理">
+                    <b>#</b> 图片处理
+                  </a>
+                </span>
+                
+                <span class="span--tag">
+                  <a href="/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" title="图片压缩">
+                    <b>#</b> 图片压缩
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <p>这是一个基于php-cli的图片压缩工具，为了简便使用，做成了单文件版。</p>
+<p>市面上常见的图片批量压缩工具通常只能压缩指定文件夹内的图片，如果文件夹中包含子文件夹、孙文件夹就需要重复添加，非常的麻烦。</p>
+<p>所以在之前<a href="/mmpic">mmPic</a>的基础上，改了改代码，用PHP遍历所有目录，并依次将图片压缩，最终可实现1:1的图片压缩。</p>
+<h2 id="压缩原则"><a href="#压缩原则" class="headerlink" title="压缩原则"></a>压缩原则</h2><p>压缩只针对图像文件，采用PHP二次绘制的方式，在不降低画质的情况下，大大降低体积。</p>
+<p>同时，对于超高分辨率的照片，进行等比缩放，让最长边小于2000像素，从而进一步缩小体积。</p>
+<p>实验证明，12MB左右的数码相机照片，经程序压缩后，可以做到1MB以下，非常好用。</p>
+<h2 id="其他文件"><a href="#其他文件" class="headerlink" title="其他文件"></a>其他文件</h2><p>其他文件程序处理不了，会原样复制到输出文件夹。</p>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><ol>
+<li>/from：原始图片文件夹输入</li>
+<li>/to：压缩后的图片输出</li>
+</ol>
+<h3 id="自建Docker运行"><a href="#自建Docker运行" class="headerlink" title="自建Docker运行"></a>自建Docker运行</h3><ol>
+<li>创建docker镜像<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image build -t img-compress .</span><br></pre></td></tr></table></figure></li>
+<li>执行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --rm -v /img/input/dir:/from -v /img/output/dir:/to img-compress</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="使用我创建的Docker运行"><a href="#使用我创建的Docker运行" class="headerlink" title="使用我创建的Docker运行"></a>使用我创建的Docker运行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --rm -v /img/input/dir:/from -v /img/output/dir:/to yhf7952/img-compress</span><br></pre></td></tr></table></figure>
+
+<h3 id="php环境中运行"><a href="#php环境中运行" class="headerlink" title="php环境中运行"></a>php环境中运行</h3><p>下载img.php，并修改输入输出路径，在php中执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php img.php</span><br></pre></td></tr></table></figure>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/wubi/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime" title="更新时间"></i>
+              2022-03-30 18:19:05
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags" title="标签"></i>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/php/" title="php">
+                        <b>#</b> php
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/" title="图片处理">
+                        <b>#</b> 图片处理
+                      </a>
+                    </span>
+                    
+                    <span class="span--tag">
+                      <a href="/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" title="图片压缩">
+                        <b>#</b> 图片压缩
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
   </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="基于php-cli的图片压缩工具">
-        <span class="time-m-d">2022-03-30</span>
-        <a href="/img-compress/">
-          <span>基于php-cli的图片压缩工具</span>
-        </a>
-      </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%8B%E7%BC%A9%E5%8E%9F%E5%88%99"><span class="toc-text">压缩原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6"><span class="toc-text">其他文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="toc-text">参数说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%87%AA%E5%BB%BADocker%E8%BF%90%E8%A1%8C"><span class="toc-text">自建Docker运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%88%91%E5%88%9B%E5%BB%BA%E7%9A%84Docker%E8%BF%90%E8%A1%8C"><span class="toc-text">使用我创建的Docker运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#php%E7%8E%AF%E5%A2%83%E4%B8%AD%E8%BF%90%E8%A1%8C"><span class="toc-text">php环境中运行</span></a></li></ol></li></ol>
     </div>
+  </div>
+
   
-    <div class="post-list">
-      <div class="post-item" title="岩兔站的始末">
-        <span class="time-m-d">2019-08-25</span>
-        <a href="/yantuz/">
-          <span>岩兔站的始末</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="微博图床(伪)-自动上传、压缩、水印">
-        <span class="time-m-d">2019-05-01</span>
-        <a href="/pictureUpload/">
-          <span>微博图床(伪)-自动上传、压缩、水印</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="单文件二维码API(PHP版)">
-        <span class="time-m-d">2018-06-24</span>
-        <a href="/qrCode/">
-          <span>单文件二维码API(PHP版)</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="基于微信小程序的rss阅读器">
-        <span class="time-m-d">2018-05-22</span>
-        <a href="/wxrss/">
-          <span>基于微信小程序的rss阅读器</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="妹子图库">
-        <span class="time-m-d">2018-04-03</span>
-        <a href="/mmpic/">
-          <span>妹子图库</span>
-        </a>
-      </div>
-    </div>
-  
-  <nav class="post-navigation">
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-    <span class="page-num">1 / 1</span>
+      <div class="comments-container">
+        
+  <div id="disqus_thread"></div>
+  <script>
+
+  /**
+  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+  /*
+  var disqus_config = function () {
+  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+  */
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://yantuz-cn.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+      </div>
     
-  </nav>
-</div>
+  </div>
+
 
         <div class="footer">
   <div class="social">

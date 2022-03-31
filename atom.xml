@@ -6,7 +6,7 @@
   <link href="https://yantuz.cn/atom.xml" rel="self"/>
   
   <link href="https://yantuz.cn/"/>
-  <updated>2021-07-06T08:46:14.765Z</updated>
+  <updated>2022-03-31T03:27:23.368Z</updated>
   <id>https://yantuz.cn/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于php-cli的图片压缩工具</title>
+    <link href="https://yantuz.cn/img-compress/"/>
+    <id>https://yantuz.cn/img-compress/</id>
+    <published>2022-03-30T18:19:05.000Z</published>
+    <updated>2022-03-31T03:27:23.368Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一个基于php-cli的图片压缩工具，为了简便使用，做成了单文件版。</p><p>市面上常见的图片批量压缩工具通常只能压缩指定文件夹内的图片，如果文件夹中包含子文件夹、孙文件夹就需要重复添加，非常的麻烦。</p><p>所以在之前<a href="/mmpic">mmPic</a>的基础上，改了改代码，用PHP遍历所有目录，并依次将图片压缩，最终可实现1:1的图片压缩。</p><h2 id="压缩原则"><a href="#压缩原则" class="headerlink" title="压缩原则"></a>压缩原则</h2><p>压缩只针对图像文件，采用PHP二次绘制的方式，在不降低画质的情况下，大大降低体积。</p><p>同时，对于超高分辨率的照片，进行等比缩放，让最长边小于2000像素，从而进一步缩小体积。</p><p>实验证明，12MB左右的数码相机照片，经程序压缩后，可以做到1MB以下，非常好用。</p><h2 id="其他文件"><a href="#其他文件" class="headerlink" title="其他文件"></a>其他文件</h2><p>其他文件程序处理不了，会原样复制到输出文件夹。</p><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><ol><li>/from：原始图片文件夹输入</li><li>/to：压缩后的图片输出</li></ol><h3 id="自建Docker运行"><a href="#自建Docker运行" class="headerlink" title="自建Docker运行"></a>自建Docker运行</h3><ol><li>创建docker镜像<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker image build -t img-compress .</span><br></pre></td></tr></table></figure></li><li>执行<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --rm -v /img/input/dir:/from -v /img/output/dir:/to img-compress</span><br></pre></td></tr></table></figure></li></ol><h3 id="使用我创建的Docker运行"><a href="#使用我创建的Docker运行" class="headerlink" title="使用我创建的Docker运行"></a>使用我创建的Docker运行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --rm -v /img/input/dir:/from -v /img/output/dir:/to yhf7952/img-compress</span><br></pre></td></tr></table></figure><h3 id="php环境中运行"><a href="#php环境中运行" class="headerlink" title="php环境中运行"></a>php环境中运行</h3><p>下载img.php，并修改输入输出路径，在php中执行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php img.php</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这是一个基于php-cli的图片压缩工具，为了简便使用，做成了单文件版。&lt;/p&gt;
+&lt;p&gt;市面上常见的图片批量压缩工具通常只能压缩指定文件夹内的图片，如果文件夹中包含子文件夹、孙文件夹就需要重复添加，非常的麻烦。&lt;/p&gt;
+&lt;p&gt;所以在之前&lt;a href=&quot;/mmpic&quot;&gt;mm</summary>
+      
+    
+    
+    
+    <category term="项目" scheme="https://yantuz.cn/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="php" scheme="https://yantuz.cn/tags/php/"/>
+    
+    <category term="图片处理" scheme="https://yantuz.cn/tags/%E5%9B%BE%E7%89%87%E5%A4%84%E7%90%86/"/>
+    
+    <category term="图片压缩" scheme="https://yantuz.cn/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/"/>
+    
+  </entry>
   
   <entry>
     <title>五笔七天速成教程</title>
