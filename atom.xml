@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>岩兔站</title>
+  <title>程序学习使用</title>
   <icon>https://yantuz.cn/icon.png</icon>
   <subtitle>分享一些笔记、知识和小工具</subtitle>
   <link href="https://yantuz.cn/atom.xml" rel="self"/>
